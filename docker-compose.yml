@@ -1,0 +1,16 @@
+services:
+  generate:
+    image: openmaptiles/planetiler-openmaptiles:latest
+    volumes:
+      - ./data:/data
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xmx${JAVA_MEMORY}
+    command: >-
+      --download
+      --osm-path=/data/${CITY_NAME}.osm.pbf
+      --output=/data/${CITY_NAME}.mbtiles
+      --maxzoom=${MAX_ZOOM}
+      --minzoom=${MIN_ZOOM}
+      --threads=${THREADS}
+      --tmpdir=/tmp
+      --download_dir=/tmp/sources

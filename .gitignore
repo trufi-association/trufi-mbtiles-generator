@@ -1,0 +1,8 @@
+# Data directory (contains .osm.pbf and .mbtiles files)
+data/*
+
+# OS files
+.DS_Store
+
+# Environment
+.env
