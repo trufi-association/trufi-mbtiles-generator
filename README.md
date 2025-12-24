@@ -1,5 +1,7 @@
 # Trufi MBTiles Generator
 
+Part of the [Trufi Association](https://trufi-association.org/) toolkit for building transit apps.
+
 Generate MBTiles files from OpenStreetMap data (.osm.pbf).
 
 ## Requirements
@@ -64,8 +66,8 @@ Then place `bogota.osm.pbf` in `data/` and run `docker compose up`.
 
 ## Get OSM Data
 
+- **Cities:** [trufi-pbf-extractor](https://github.com/trufi-association/trufi-pbf-extractor) (recommended)
 - **Countries/Regions:** [download.geofabrik.de](https://download.geofabrik.de/)
-- **Cities:** [extract.bbbike.org](https://extract.bbbike.org/)
 
 ## License
 
