@@ -28,10 +28,19 @@ The `.mbtiles` file will be generated in `data/`.
 | Variable | Description |
 |----------|-------------|
 | `CITY_NAME` | City name (used for input/output filenames) |
-| `MAX_ZOOM` | Maximum zoom level (recommended: 14) |
+| `MAX_ZOOM` | Maximum zoom level |
 | `MIN_ZOOM` | Minimum zoom level (recommended: 0) |
 | `JAVA_MEMORY` | Java heap memory (e.g., `4g`, `8g`) |
 | `THREADS` | Number of processing threads |
+
+### Recommended zoom levels
+
+| Zoom | Detail | Use case |
+|------|--------|----------|
+| 14 | Streets, transit stops | Good for transit apps (recommended) |
+| 15 | Buildings, fine details | Maximum detail (largest file size) |
+
+Maximum supported zoom is **15**. Each zoom level quadruples the number of tiles, so file size grows exponentially. For most transit apps, **zoom 14** provides the best balance between detail and file size.
 
 ### Finding your available threads
 
@@ -56,7 +65,7 @@ To generate tiles for Bogota with higher zoom:
 
 ```env
 CITY_NAME=bogota
-MAX_ZOOM=16
+MAX_ZOOM=15
 MIN_ZOOM=0
 JAVA_MEMORY=8g
 THREADS=8
